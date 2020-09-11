@@ -20,9 +20,9 @@ body {
     color: #999999;
 }
 
-ul {
+/* ul {
     list-style: none;
-}
+} */
 
 h1, h2, h3, h4 {
     color: #ffffff;
@@ -166,6 +166,16 @@ p {
     margin-top: 1.5rem;
 }
 
+#tab-1-content .tab-1-content-inner ul {
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+#tab-1-content .tab-1-content-inner li {
+    padding-bottom: 6px;
+    list-style-position: inherit;
+}
+
 #tab-1-content .tab-1-content-inner #education {
     display: grid;
     grid-template-columns: 10% 90%;
@@ -187,21 +197,37 @@ p {
     text-align: center;
 }
 
-#tab-3-content .tab-3-content-inner h2{
+#tab-3-content .tab-3-content-inner h2 {
     margin-top: 1.5rem;
 }
 
-#tab-3-content .tab-3-content-inner p{
+#tab-3-content .tab-3-content-inner p {
     margin-bottom: 1.3rem;
 }
 
 /* Form */
 
-#tab-3-content .contact input,#tab-3-content .contact textarea{
+#tab-3-content .contact input, #tab-3-content .contact textarea {
     width: 50%;
     padding: 5px;
     background: #1e242c;
     margin: 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    color: #999999;
+    resize: vertical;
+}
+
+#tab-3-content .contact input, #tab-3-content .contact textarea {
+    transition: width 0.4s ease-in-out;
+}
+  
+#tab-3-content .contact input:focus, #tab-3-content .contact textarea:focus {
+    width: 100%;
+}
+
+#tab-3-content .contact textarea:focus {
+    height: 150px;
 }
 
 /* Footer */
@@ -280,13 +306,6 @@ p {
         font-size: 1.5rem;
     }
 
-    #tab-3-content .contact input,#tab-3-content .contact textarea{
-        width: 100%;
-        padding: 5px;
-        background: #1e242c;
-        margin: 1rem;
-    }
-
     .text-xl {
         font-size: 1.5rem;
     }
@@ -317,7 +336,6 @@ p {
         max-width: 90%;
         margin: auto;
         overflow: hidden;
-        padding: 0 1rem;
     }
 
     .button_1{
@@ -330,6 +348,18 @@ p {
     .showcase {
         background: url(../img/background.png) no-repeat center right/cover;
         background-position: 65% 0;
+    }
+
+    .tab-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .tab-content p {
+        font-size: 1rem;
+    }
+
+    .tab-content li {
+        font-size: 1rem;
     }
 }
 
