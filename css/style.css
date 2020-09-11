@@ -187,6 +187,16 @@ p {
     text-align: center;
 }
 
+#tab-3-content .tab-3-content-inner h2{
+    margin-top: 1.5rem;
+}
+
+#tab-3-content .tab-3-content-inner p{
+    margin-bottom: 1.3rem;
+}
+
+/* Form */
+
 #tab-3-content .contact input,#tab-3-content .contact textarea{
     width: 50%;
     padding: 5px;
@@ -197,10 +207,10 @@ p {
 /* Footer */
 
 .footer {
-    background: var(--dark-color);
     max-width: 75%;
     margin: 1rem auto;
     overflow: auto;
+    text-align: center;
 }
 
 /* Utility Classes */
@@ -252,8 +262,8 @@ p {
 /* Media */
 
 @media(max-width: 960px) {
-    .showcase {
-        height: 70;
+    .tab-content {
+        padding: 1rem 0;
     }
 
     .hide-sm
@@ -270,6 +280,13 @@ p {
         font-size: 1.5rem;
     }
 
+    #tab-3-content .contact input,#tab-3-content .contact textarea{
+        width: 100%;
+        padding: 5px;
+        background: #1e242c;
+        margin: 1rem;
+    }
+
     .text-xl {
         font-size: 1.5rem;
     }
@@ -284,11 +301,28 @@ p {
 }
 
 @media(max-width: 700px) {
+    .showcase::after {
+        box-shadow: inset 80px 80px 250px #000000, inset -80px -80px 250px #000000;
+    }
+
+    #tab-1-content .tab-1-content-inner , #tab-2-content .tab-2-content-inner p, #tab-3-content .tab-3-content-inner p {
+        text-align: justify;
+    }
+
+    #tab-1-content .tab-1-content-inner h2 {
+        text-align: center;
+    }
+
     .container {
         max-width: 90%;
         margin: auto;
         overflow: hidden;
         padding: 0 1rem;
+    }
+
+    .button_1{
+        width: 75%;
+        margin: auto;
     }
 }
 
