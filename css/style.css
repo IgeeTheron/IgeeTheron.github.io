@@ -1,7 +1,7 @@
 /* Variables */
 
 :root {
-    --primary-color: #0020c2;
+    --primary-color: #005BF2;
     --dark-color: #141414;
 }
 
@@ -325,4 +325,34 @@ p {
         margin: auto;
     }
 }
+
+@media(max-width: 450px) {
+    .showcase {
+        background: url(../img/background.png) no-repeat center right/cover;
+        background-position: 65% 0;
+    }
+}
+
+@media screen and (orientation:landscape)  and (max-width: 750px){
+    showcase::after {
+        box-shadow: inset 80px 80px 250px #000000, inset -80px -80px 250px #000000;
+    }
+
+    .showcase-content {
+        margin-top: 4rem;
+    }
+
+    .showcase-top img {
+        width: 120px;
+    }
+
+    .showcase-content h1 {
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    .showcase-content p {
+        font-size: 1rem;
+    }
+ }
 
