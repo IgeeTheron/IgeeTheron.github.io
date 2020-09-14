@@ -20,10 +20,6 @@ body {
     color: #999999;
 }
 
-/* ul {
-    list-style: none;
-} */
-
 h1, h2, h3, h4 {
     color: #ffffff;
 }
@@ -158,22 +154,38 @@ p {
     display: block !important;
 }
 
+/* Tab 1 */
+
 #tab-1-content .tab-1-content-inner {
     text-align: center;
 }
 
-#tab-1-content .tab-1-content-inner h2 {
+#tab-1-content .tab-1-content-inner h2  {
     margin-top: 1.5rem;
 }
 
-#tab-1-content .tab-1-content-inner ul {
-    font-size: 1.2rem;
-    text-align: justify;
+#tab-1-content #skills {
+    display: flex;
+    justify-content: center;
 }
 
-#tab-1-content .tab-1-content-inner li {
-    padding-bottom: 6px;
+#tab-1-content #skills ul,#tab-1-content #achievements ul{
+    font-size: 1.2rem;
+    text-align: start;
+}
+
+#tab-1-content #skills li,#tab-1-content #achievements li{
+    padding: 6px 0;
     list-style-position: inherit;
+}
+
+#tab-1-content #achievements{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#tab-1-content #achievements h3{
+    margin-bottom: 6px;
 }
 
 #tab-1-content .tab-1-content-inner #education {
@@ -185,6 +197,8 @@ p {
     text-align: center;
 }
 
+/* Tab 2 */
+
 #tab-2-content .tab-2-content-inner {
     text-align: center;
 }
@@ -192,6 +206,8 @@ p {
 #tab-2-content .tab-2-content-inner h2 {
     margin-top: 1.5rem;
 }
+
+/* tab 3 */
 
 #tab-3-content .tab-3-content-inner {
     text-align: center;
@@ -205,9 +221,13 @@ p {
     margin-bottom: 1.3rem;
 }
 
-/* Form */
+#tab-3-content .tab-3-content-inner a:hover {
+    color: var(--primary-color);
+}
 
-#tab-3-content .contact input, #tab-3-content .contact textarea {
+/* Form for later use*/ 
+
+/* #tab-3-content .contact input, #tab-3-content .contact textarea {
     width: 50%;
     padding: 5px;
     background: #1e242c;
@@ -228,7 +248,7 @@ p {
 
 #tab-3-content .contact textarea:focus {
     height: 150px;
-}
+} */
 
 /* Footer */
 
@@ -239,6 +259,9 @@ p {
     text-align: center;
 }
 
+.footer a:hover {
+    color: var(--primary-color);
+}
 /* Utility Classes */
 /* Container */
 
@@ -283,6 +306,7 @@ p {
     padding-left: 20px;
     padding-right: 20px;
     color: #ffffff;
+    margin: 1rem;
 }
 
 /* Media */
@@ -360,6 +384,12 @@ p {
 
     .tab-content li {
         font-size: 1rem;
+    }
+
+    #tab-1-content #achievements {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 
