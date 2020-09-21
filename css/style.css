@@ -47,6 +47,7 @@ img {
 
 #preload {
     position: fixed;
+    flex-direction: column;
     top: 0;
     width: 100%;
     height: 100vh;
@@ -60,18 +61,7 @@ img {
 
 #preload img {
     width: initial;
-}
-
-#preload .airplane {
-    height: 200px;
-    animation: airplane 1s ease infinite alternate;
-}
-
-#preload h3 {
-    position: absolute;
-    top: 75%;
-    transform: translateY(-75%);
-    font-size: 30px;
+    height: 300px;
 }
 
 .preload-finish {
@@ -79,12 +69,22 @@ img {
     pointer-events: none;
 }
 
-@keyframes airplane {
-    from {
-        transform: translateY(0px);
+#preload .loudingA {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-width: 3px;
+    border-style: solid;
+    border-color: var(--primary-color) transparent var(--primary-color) transparent;
+    animation: loudingA 2s linear infinite;
+}
+
+@keyframes loudingA {
+    0% {
+        transform: rotate(0deg);
     }
-    to{
-        transform: translateY(50px);
+    100% {
+        transform: rotate(360deg);
     }
 }
 
@@ -451,6 +451,11 @@ p {
 }
 
 @media(max-width: 450px) {
+    #preload img {
+        width: initial;
+        height: 200px;
+    }
+
     .showcase {
         background: url(../img/background.png) no-repeat center right/cover;
         background-position: 65% 0;
@@ -476,6 +481,11 @@ p {
 }
 
 @media screen and (orientation:landscape)  and (max-width: 750px){
+    #preload img {
+        width: initial;
+        height: 200px;
+    }
+
     showcase::after {
         box-shadow: inset 80px 80px 250px #000000, inset -80px -80px 250px #000000;
     }
