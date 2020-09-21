@@ -1,11 +1,15 @@
+/* ------------------------------------- */
 /* Variables */
+/* ------------------------------------- */
 
 :root {
     --primary-color: #005BF2;
     --dark-color: #141414;
 }
 
+/* ------------------------------------- */
 /* Global */
+/* ------------------------------------- */
 
 * {
     box-sizing: border-box;
@@ -37,7 +41,56 @@ img {
     width: 100%;
 }
 
+/* ------------------------------------- */
+/* preloader */
+/* ------------------------------------- */
+
+#preload {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--dark-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+    z-index: 3;
+}
+
+#preload img {
+    width: initial;
+}
+
+#preload .airplane {
+    height: 200px;
+    animation: airplane 1s ease infinite alternate;
+}
+
+#preload h3 {
+    position: absolute;
+    top: 75%;
+    transform: translateY(-75%);
+    font-size: 30px;
+}
+
+.preload-finish {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes airplane {
+    from {
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(50px);
+    }
+}
+
+/* ------------------------------------- */
 /* Showcase */
+/* ------------------------------------- */
 
 .showcase {
     width: 100%;
@@ -101,7 +154,9 @@ img {
     margin: 0 0 2rem;
 }
 
+/* ------------------------------------- */
 /* Tabs */
+/* ------------------------------------- */
 
 .tabs {
     background: var(--dark-color);
@@ -136,7 +191,9 @@ p {
     border-bottom: var(--primary-color) 4px solid;
 }
 
+/* ------------------------------------- */
 /* Tab Content */
+/* ------------------------------------- */
 
 .tab-content {
     padding: 3rem;
@@ -154,7 +211,9 @@ p {
     display: block !important;
 }
 
+/* ------------------------------------- */
 /* Tab 1 */
+/* ------------------------------------- */
 
 #tab-1-content .tab-1-content-inner {
     text-align: center;
@@ -197,7 +256,9 @@ p {
     text-align: center;
 }
 
+/* ------------------------------------- */
 /* Tab 2 */
+/* ------------------------------------- */
 
 #tab-2-content .tab-2-content-inner {
     text-align: center;
@@ -207,7 +268,9 @@ p {
     margin-top: 1.5rem;
 }
 
+/* ------------------------------------- */
 /* tab 3 */
+/* ------------------------------------- */
 
 #tab-3-content .tab-3-content-inner {
     text-align: center;
@@ -237,7 +300,9 @@ p {
     background-position: 0 100%;
 }
 
+/* ------------------------------------- */
 /* Form for later use*/ 
+/* ------------------------------------- */
 
 /* #tab-3-content .contact input, #tab-3-content .contact textarea {
     width: 50%;
@@ -262,7 +327,9 @@ p {
     height: 150px;
 } */
 
+/* ------------------------------------- */
 /* Footer */
+/* ------------------------------------- */
 
 .footer {
     max-width: 75%;
@@ -285,7 +352,9 @@ p {
     padding: 0 2rem;
 }
 
+/* ------------------------------------- */
 /* Text */
+/* ------------------------------------- */
 
 .text-xl {
     font-size: 2rem;
@@ -310,9 +379,11 @@ p {
     color: #999999;
 }
 
+/* ------------------------------------- */
 /* Button */
+/* ------------------------------------- */
 
-.button_1{
+/* .button_email{
     height: 38px;
     background: var(--primary-color);
     border: 0;
@@ -320,9 +391,11 @@ p {
     padding-right: 20px;
     color: #ffffff;
     margin: 1rem;
-}
+} */
 
+/* ------------------------------------- */
 /* Media */
+/* ------------------------------------- */
 
 @media(max-width: 960px) {
     .tab-content {
