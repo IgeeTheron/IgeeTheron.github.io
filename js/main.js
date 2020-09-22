@@ -1,3 +1,7 @@
+// -------------------------------------
+// Tabs code
+// -------------------------------------
+
 const tabItems = document.querySelectorAll('.tab-item');
 const tabContentItems = document.querySelectorAll('.tab-content-item');
 
@@ -26,3 +30,22 @@ function removeShow()
 
 //Listen for tab click
 tabItems.forEach(item => item.addEventListener('click', selectItem));
+
+// -------------------------------------
+// Preload code
+// -------------------------------------
+
+window.addEventListener('DOMContentLoaded', () => {
+    var style = document.createElement("style");
+    style.innerHTML = `body { overflow: hidden; }`;
+    document.body.appendChild(style);
+})
+
+window.addEventListener('load', () => {
+    const preload = document.querySelector('#preload');
+    preload.classList.add('preload-finish');
+    
+    var style = document.createElement("style");
+    style.innerHTML = `body { overflow: auto; }`;
+    document.body.appendChild(style);
+})
