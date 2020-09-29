@@ -70,6 +70,12 @@ img {
     margin-bottom: 1.1rem;
 }
 
+#preload #catFactsAPI {
+    width: 75%;
+    text-align: center;
+    padding: 1.3rem 0;
+}
+
 .preload-finish {
     opacity: 0;
     pointer-events: none;
@@ -344,6 +350,10 @@ p {
     text-align: center;
 }
 
+.footer #jokeAPI {
+    margin-bottom: 1.5rem;
+}
+
 .footer a:hover {
     color: var(--primary-color);
     font-size: 120%;
@@ -490,8 +500,14 @@ p {
 
 @media screen and (orientation:landscape)  and (max-width: 750px){
     #preload img {
+        display: flex;
+        left: 10px;
         width: initial;
-        height: 200px;
+        height: 160px;
+    }
+    
+    #preload #catFactsAPI {
+        padding: 1.1rem 0;
     }
 
     showcase::after {

@@ -1,4 +1,23 @@
 // -------------------------------------
+// Preload code
+// -------------------------------------
+
+window.addEventListener('DOMContentLoaded', () => {
+    var style = document.createElement("style");
+    style.innerHTML = `body { overflow: hidden; }`;
+    document.body.appendChild(style);
+})
+
+window.addEventListener('load', () => {
+    const preload = document.querySelector('#preload');
+    preload.classList.add('preload-finish');
+    
+    var style = document.createElement("style");
+    style.innerHTML = `body { overflow: auto; }`;
+    document.body.appendChild(style);
+})
+
+// -------------------------------------
 // Tabs code
 // -------------------------------------
 
@@ -32,20 +51,17 @@ function removeShow()
 tabItems.forEach(item => item.addEventListener('click', selectItem));
 
 // -------------------------------------
-// Preload code
+// API
 // -------------------------------------
 
-window.addEventListener('DOMContentLoaded', () => {
-    var style = document.createElement("style");
-    style.innerHTML = `body { overflow: hidden; }`;
-    document.body.appendChild(style);
+fetch('https://sv443.net/jokeapi/v2/joke/Programming?blacklistFlags=nsfw&format=txt&type=single')
+.then((res) => res.text())
+.then((data) => {
+    document.getElementById('jokeAPI').innerHTML = data;
 })
 
-window.addEventListener('load', () => {
-    const preload = document.querySelector('#preload');
-    preload.classList.add('preload-finish');
-    
-    var style = document.createElement("style");
-    style.innerHTML = `body { overflow: auto; }`;
-    document.body.appendChild(style);
+fetch('https://catfact.ninja/fact?max_length=140')
+.then((res) => res.json())
+.then((data) => {
+    document.getElementById('catFactsAPI').innerHTML = data.fact;
 })
