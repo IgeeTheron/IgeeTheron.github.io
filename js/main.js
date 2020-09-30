@@ -1,4 +1,23 @@
 // -------------------------------------
+// Preload code
+// -------------------------------------
+
+window.addEventListener('DOMContentLoaded', () => {
+    var style = document.createElement("style");
+    style.innerHTML = `body { overflow: hidden; }`;
+    document.body.appendChild(style);
+})
+
+window.addEventListener('load', () => {
+    const preload = document.querySelector('#preload');
+    preload.classList.add('preload-finish');
+    
+    var style = document.createElement("style");
+    style.innerHTML = `body { overflow: auto; }`;
+    document.body.appendChild(style);
+})
+
+// -------------------------------------
 // Tabs code
 // -------------------------------------
 
@@ -32,20 +51,38 @@ function removeShow()
 tabItems.forEach(item => item.addEventListener('click', selectItem));
 
 // -------------------------------------
-// Preload code
+// API
 // -------------------------------------
 
-window.addEventListener('DOMContentLoaded', () => {
-    var style = document.createElement("style");
-    style.innerHTML = `body { overflow: hidden; }`;
-    document.body.appendChild(style);
+fetch('https://sv443.net/jokeapi/v2/joke/Programming?blacklistFlags=nsfw&format=txt&type=single')
+.then((res) => res.text())
+.then((data) => {
+    document.getElementById('jokeAPI').innerHTML = data;
 })
 
-window.addEventListener('load', () => {
-    const preload = document.querySelector('#preload');
-    preload.classList.add('preload-finish');
+fetch('https://catfact.ninja/fact?max_length=140')
+.then((res) => res.json())
+.then((data) => {
+    document.getElementById('catFactsAPI').innerHTML = data.fact;
+})
+
+fetch('https://api.currentsapi.services/v1/search?category=programming&language=en&apiKey=VWcC5PcYKDrgWT0QVz4u9l1YSxTMNa87U82axPDegz61H-3K')
+.then((res) => res.json())
+.then((data) => {
+    console.log(data)
+    console.log(data.news[0].title);
     
-    var style = document.createElement("style");
-    style.innerHTML = `body { overflow: auto; }`;
-    document.body.appendChild(style);
+    let news = '<h2 class="text-xl">Current news about programming</h2>';
+
+    for (let i = 0; i < 10; i++)
+    {
+        news += 
+        `
+            <div class="spacing">
+                <a href="${data.news[i].url}" target="blank">${data.news[i].title}
+            </div>
+        `;
+    } 
+
+    document.getElementById('news').innerHTML = news;
 })
