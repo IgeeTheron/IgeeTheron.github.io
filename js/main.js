@@ -66,7 +66,7 @@ fetch('https://catfact.ninja/fact?max_length=140')
     document.getElementById('catFactsAPI').innerHTML = data.fact;
 })
 
-fetch('https://api.currentsapi.services/v1/search?category=programming&language=en&apiKey=VWcC5PcYKDrgWT0QVz4u9l1YSxTMNa87U82axPDegz61H-3K')
+fetch('https://api.currentsapi.services/v1/search?category=programming&language=en&apiKey=iU2dXwZyDuKp3bnW0_w8UWSEMLOF_HW6vI49rwHMqAL0rhrd')
 .then((res) => res.json())
 .then((data) => {
     console.log(data)
