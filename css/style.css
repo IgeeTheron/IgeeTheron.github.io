@@ -130,7 +130,7 @@ img {
 }
 
 .showcase-top img {
-    width: 220px;
+    width: 180px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -545,7 +545,7 @@ p {
     }
 
     .showcase-top img {
-        width: 120px;
+        width: 110px;
     }
 
     .showcase-content h1 {
