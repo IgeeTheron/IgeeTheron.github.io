@@ -69,7 +69,6 @@ fetch('https://catfact.ninja/fact?max_length=140')
 fetch('https://api.currentsapi.services/v1/search?category=programming&language=en&apiKey=iU2dXwZyDuKp3bnW0_w8UWSEMLOF_HW6vI49rwHMqAL0rhrd')
 .then((res) => res.json())
 .then((data) => {
-    
     let news = '<h2 class="text-xl">Current news about programming</h2>';
 
     for (let i = 0; i < 10; i++)
